@@ -1,0 +1,34 @@
+main {
+  background-color: $BleuGrispetit;
+  padding: 60px 0;
+  .main-2 {
+    @include Margin;
+    h2 {
+      font-size: 2.3rem;
+      font-weight: 400;
+    }
+    p {
+      line-height: 25px;
+      margin: 20px 0 50px 0;
+    }
+    .main-container {
+      @include Spacebetween;
+      gap: 15px;
+      margin-top: 50px;
+      h3 {
+        margin: 35px 0 0 0;
+      }
+      p {
+        text-wrap: balance;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  h3 {
+    font-size: 1.1rem;
+  }
+}

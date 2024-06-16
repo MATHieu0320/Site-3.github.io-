@@ -1,0 +1,127 @@
+header {
+  background: $UnpeuGris;
+  position: relative;
+  .bg-white {
+    position: relative;
+    z-index: 3;
+    background-color: $Blanc;
+    padding: 15px 0;
+    // height: 10vh;
+  }
+  nav {
+    @include Margin;
+    background-color: $Blanc;
+    @include Spacebetween;
+    gap: 15px;
+    img {
+      height: 30px;
+      width: 150px;
+    }
+    ul {
+      @include Spacebetween;
+
+      width: 500px;
+      // width: 60ùM;
+
+      li {
+        position: relative;
+      }
+    }
+
+    ul li a::after {
+      content: "";
+      position: absolute;
+      background-color: $BleuClair;
+
+      height: 3px;
+      width: 0%;
+      left: 0;
+      top: 42px;
+      transition: 0.5s;
+    }
+    ul li a:hover {
+      color: black;
+    }
+    ul li a:hover::after {
+      width: 100%;
+      color: black !important;
+    }
+  }
+  .Vitrine {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 2.5%;
+    @include Spacebetween;
+    height: 78vh;
+    // height: 92vh;
+    .Vitrine1 {
+      width: 50%;
+
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: calc(2.5vw + 1rem);
+      font-weight: 500;
+    }
+    p {
+      line-height: 25px;
+      margin: 20px 0;
+      @media screen and (max-width: 980px) {
+        br {
+          display: none;
+        }
+        text-wrap: balance;
+      }
+    }
+    .Vitrine2 {
+      width: 70%;
+      height: 100%;
+      @media screen and (max-width: 980px) {
+        width: 79%;
+      }
+      @media screen and (max-width: 750px) {
+        width: 100%;
+      }
+    }
+    .Absolute1 {
+      width: 100%;
+      height: 100%;
+    }
+    .Absolute1 img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+@media screen and (max-width: 980px) {
+  header p br {
+    display: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  header nav ul,
+  header nav button {
+    display: none;
+  }
+  #hamburger {
+    display: block !important;
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+  }
+  header .Vitrine {
+    flex-direction: column-reverse;
+    padding: 0;
+    height: 700px;
+  }
+  header .Vitrine .Vitrine1 {
+    padding: 15px 0 20px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  header button {
+    margin: 0 auto;
+  }
+}
