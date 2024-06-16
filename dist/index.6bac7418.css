@@ -1,0 +1,329 @@
+@font-face {
+  font-family: PublicSans;
+  src: url("PublicSans-Medium.d1832871.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: PublicSans, serif;
+}
+
+a {
+  color: #b4adad;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: PublicSans, serif;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(90deg, #31cf6e 22%, #30c792 31%, #2bb9cf 82%);
+  border: none;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  min-width: 140px;
+  padding: 13px 25px;
+  transition: all .2s ease-in;
+  display: flex;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+#Absolute2 {
+  z-index: 2;
+  background: url("image-mockups.6e469d3f.png") center / 100% 100% no-repeat;
+  width: 50%;
+  max-width: 682px;
+  height: 100%;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+}
+
+@media screen and (width <= 980px) {
+  #Absolute2 {
+    width: 58%;
+    left: 40%;
+  }
+}
+
+@media screen and (width <= 750px) {
+  #Absolute2 {
+    width: 73%;
+    min-width: 450px;
+    height: 667px;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .Absolute1 img {
+    display: none;
+  }
+
+  .Absolute1 {
+    background: url("bg-intro-mobile.bfd17545.svg") center / cover;
+  }
+}
+
+header {
+  background: #fafafa;
+  position: relative;
+}
+
+header .bg-white {
+  z-index: 3;
+  background-color: #fff;
+  padding: 15px 0;
+  position: relative;
+}
+
+header nav {
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2.5%;
+  display: flex;
+}
+
+header nav img {
+  width: 150px;
+  height: 30px;
+}
+
+header nav ul {
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  display: flex;
+}
+
+header nav ul li {
+  position: relative;
+}
+
+header nav ul li a:after {
+  content: "";
+  background-color: #2bb7da;
+  width: 0%;
+  height: 3px;
+  transition: all .5s;
+  position: absolute;
+  top: 42px;
+  left: 0;
+}
+
+header nav ul li a:hover {
+  color: #000;
+}
+
+header nav ul li a:hover:after {
+  width: 100%;
+  color: #000 !important;
+}
+
+header .Vitrine {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1500px;
+  height: 78vh;
+  margin: 0 auto;
+  padding: 0 2.5%;
+  display: flex;
+}
+
+header .Vitrine .Vitrine1 {
+  width: 50%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+header .Vitrine h1 {
+  font-size: calc(2.5vw + 1rem);
+  font-weight: 500;
+}
+
+header .Vitrine p {
+  margin: 20px 0;
+  line-height: 25px;
+}
+
+@media screen and (width <= 980px) {
+  header .Vitrine p {
+    text-wrap: balance;
+  }
+
+  header .Vitrine p br {
+    display: none;
+  }
+}
+
+header .Vitrine .Vitrine2 {
+  width: 70%;
+  height: 100%;
+}
+
+@media screen and (width <= 980px) {
+  header .Vitrine .Vitrine2 {
+    width: 79%;
+  }
+}
+
+@media screen and (width <= 750px) {
+  header .Vitrine .Vitrine2 {
+    width: 100%;
+  }
+}
+
+header .Vitrine .Absolute1, header .Vitrine .Absolute1 img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (width <= 980px) {
+  header p br {
+    display: none;
+  }
+}
+
+@media screen and (width <= 750px) {
+  header nav ul, header nav button {
+    display: none;
+  }
+
+  #hamburger {
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    display: block !important;
+  }
+
+  header .Vitrine {
+    flex-direction: column-reverse;
+    height: 700px;
+    padding: 0;
+  }
+
+  header .Vitrine .Vitrine1 {
+    text-align: center;
+    width: 100%;
+    padding: 15px 0 20px;
+  }
+
+  header button {
+    margin: 0 auto;
+  }
+}
+
+main {
+  background-color: #f3f4f6;
+  padding: 60px 0;
+}
+
+main .main-2 {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2.5%;
+}
+
+main .main-2 h2 {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+main .main-2 p {
+  margin: 20px 0 50px;
+  line-height: 25px;
+}
+
+main .main-2 .main-container {
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+  display: flex;
+}
+
+main .main-2 .main-container h3 {
+  margin: 35px 0 0;
+}
+
+main .main-2 .main-container p {
+  text-wrap: balance;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 0;
+}
+
+@media screen and (width <= 950px) {
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+section {
+  background: #fafafa;
+  padding: 100px 0;
+}
+
+section h4 {
+  max-width: 1500px;
+  margin: 0 auto 50px;
+  padding: 0 2.5%;
+  font-size: calc(2.2vh + 1.2rem);
+  font-weight: 400;
+}
+
+section .section-container {
+  grid-template-columns: 25% 25% 25% 25%;
+  gap: 20px;
+  max-width: 1500px;
+  margin: 0 auto 15px;
+  padding: 0 2.5%;
+  display: grid;
+}
+
+section .section-container-1 {
+  background-color: #fff;
+}
+
+section img {
+  border-radius: 5px;
+  width: 100%;
+  height: 220px;
+}
+
+section .Texte {
+  padding: 10%;
+}
+
+section span {
+  color: gray;
+  font-size: .8rem;
+}
+
+section h5 {
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+section p {
+  text-wrap: balance;
+}
+/*# sourceMappingURL=index.6bac7418.css.map */
