@@ -20,7 +20,7 @@ li {
 
 body {
   font-family: PublicSans, serif;
-  background-color: brown;
+  overflow-x: hidden;
 }
 
 button {
@@ -42,14 +42,57 @@ button:hover {
   filter: brightness(1.2);
 }
 
+#Absolute2 {
+  background: url(../../images/image-mockups.png) center/cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 50%;
+  max-width: 682px;
+  top: 15%;
+  left: 50%;
+  position: absolute;
+  z-index: 2;
+}
+@media screen and (max-width: 980px) {
+  #Absolute2 {
+    width: 58%;
+    left: 40%;
+  }
+}
+@media screen and (max-width: 750px) {
+  #Absolute2 {
+    left: 50%;
+    top: 24%;
+    width: 73%;
+    min-width: 450px;
+    transform: translate(-50%, -50%);
+    height: 667px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .Absolute1 img {
+    display: none;
+  }
+  .Absolute1 {
+    background: url(../../images/bg-intro-mobile.svg) center/cover;
+  }
+}
+header {
+  background: hsl(0, 0%, 98%);
+  position: relative;
+}
 header .bg-white {
+  position: relative;
+  z-index: 3;
   background-color: hsl(0, 0%, 100%);
   padding: 15px 0;
 }
 header nav {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 2.5%;
   background-color: hsl(0, 0%, 100%);
   display: flex;
   justify-content: space-between;
@@ -69,12 +112,185 @@ header nav ul {
 header nav ul li {
   position: relative;
 }
-header nav ul li a::after:hover {
+header nav ul li a::after {
   content: "";
   position: absolute;
-  top: 25px;
-  left: 0;
-  background-color: aqua;
+  background-color: hsl(192, 70%, 51%);
   height: 3px;
+  width: 0%;
+  left: 0;
+  top: 42px;
+  transition: 0.5s;
+}
+header nav ul li a:hover {
+  color: black;
+}
+header nav ul li a:hover::after {
   width: 100%;
+  color: black !important;
+}
+header .Vitrine {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 78vh;
+}
+header .Vitrine .Vitrine1 {
+  width: 50%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+header .Vitrine h1 {
+  font-size: calc(2.5vw + 1rem);
+  font-weight: 500;
+}
+header .Vitrine p {
+  line-height: 25px;
+  margin: 20px 0;
+}
+@media screen and (max-width: 980px) {
+  header .Vitrine p {
+    text-wrap: balance;
+  }
+  header .Vitrine p br {
+    display: none;
+  }
+}
+header .Vitrine .Vitrine2 {
+  width: 70%;
+  height: 100%;
+}
+@media screen and (max-width: 980px) {
+  header .Vitrine .Vitrine2 {
+    width: 79%;
+  }
+}
+@media screen and (max-width: 750px) {
+  header .Vitrine .Vitrine2 {
+    width: 100%;
+  }
+}
+header .Vitrine .Absolute1 {
+  width: 100%;
+  height: 100%;
+}
+header .Vitrine .Absolute1 img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 980px) {
+  header p br {
+    display: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  header nav ul,
+  header nav button {
+    display: none;
+  }
+  #hamburger {
+    display: block !important;
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+  }
+  header .Vitrine {
+    flex-direction: column-reverse;
+    padding: 0;
+    height: 700px;
+  }
+  header .Vitrine .Vitrine1 {
+    padding: 15px 0 20px 0;
+    width: 100%;
+    text-align: center;
+  }
+  header button {
+    margin: 0 auto;
+  }
+}
+main {
+  background-color: hsl(220, 16%, 96%);
+  padding: 60px 0;
+}
+main .main-2 {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2.5%;
+}
+main .main-2 h2 {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+main .main-2 p {
+  line-height: 25px;
+  margin: 20px 0 50px 0;
+}
+main .main-2 .main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+main .main-2 .main-container h3 {
+  margin: 35px 0 0 0;
+}
+main .main-2 .main-container p {
+  text-wrap: balance;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 950px) {
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+section {
+  background: hsl(0, 0%, 98%);
+  padding: 100px 0;
+}
+section h4 {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2.5%;
+  font-size: calc(2.2vh + 1.2rem);
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+section .section-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 2.5%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+section .section-container-1 {
+  background-color: hsl(0, 0%, 100%);
+}
+section img {
+  width: 100%;
+  height: 220px;
+  border-radius: 5px;
+}
+section .Texte {
+  padding: 10%;
+}
+section span {
+  color: gray;
+  font-size: 0.8rem;
+}
+section h5 {
+  font-size: 1rem;
+  margin: 15px 0;
+}
+section p {
+  text-wrap: balance;
 }/*# sourceMappingURL=index.css.map */
